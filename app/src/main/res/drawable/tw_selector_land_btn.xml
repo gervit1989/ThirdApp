@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/ico_btn_en_color"/>
+                    <size android:height="@dimen/ico_btn_land_size"
+                          android:width="@dimen/ico_btn_land_size"/>
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_tw_24"
+                  android:top="@dimen/ico_btn_land_pad"
+                  android:bottom="@dimen/ico_btn_land_pad"
+                  android:left="@dimen/ico_btn_land_pad"
+                  android:right="@dimen/ico_btn_land_pad"/>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/ico_btn_color"/>
+                    <size android:height="@dimen/ico_btn_land_size"
+                          android:width="@dimen/ico_btn_land_size"/>
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_tw_24"
+                  android:top="@dimen/ico_btn_land_pad"
+                  android:bottom="@dimen/ico_btn_land_pad"
+                  android:left="@dimen/ico_btn_land_pad"
+                  android:right="@dimen/ico_btn_land_pad"/>
+        </layer-list>
+    </item>
+</selector>

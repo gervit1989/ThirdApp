@@ -15,5 +15,14 @@
 
     <string name="font_book">fonts/PTBebasNeueBook.ttf</string>
     <string name="font_regular">fonts/PTBebasNeueRegular.ttf</string>
+    <string name="text_email">gervit2008@mail.ru</string>
+    <string name="paer_account_string">Личный кабинет</string>
+    <string name="goods_catalog_string">Каталог товаров</string>
+    <string name="favorites_string">Избранное</string>
+    <string name="orders_string">Мои заказы</string>
+    <string name="notices_string">Мои уведомления</string>
+    <string name="account_name">Герасимов Виталий</string>
+    <string name="open_drawer_str">open</string>
+    <string name="close_drawer_str">close</string>
 
 </resources>

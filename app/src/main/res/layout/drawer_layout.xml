@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_height_size"
+                android:paddingTop="@dimen/drawer_top_size"
+                android:paddingBottom="@dimen/spacing_normal_16"
+                android:paddingLeft="@dimen/padding_drawer_size"
+                android:paddingRight="@dimen/padding_drawer_size"
+                android:background="@drawable/header">
+
+    <ImageView
+        android:id="@+id/account_avatar"
+        android:layout_width="@dimen/account_avatar"
+        android:layout_height="@dimen/account_avatar"
+        android:src="@drawable/logo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        />
+    <TextView
+        android:id="@+id/account_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/account_name"
+        android:fontFamily="@string/roboto_regular"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/font_medium"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

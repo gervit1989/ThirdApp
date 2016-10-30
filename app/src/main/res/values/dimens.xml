@@ -41,6 +41,13 @@
     <dimen name="ico_btn_land_size">28dp</dimen>
     <dimen name="ico_btn_land_pad">8dp</dimen>
     <dimen name="social_layout_land_pad">8dp</dimen>
+    <dimen name="spacing_normal_16">16dp</dimen>
+    <dimen name="mobile_status_bar">24dp</dimen>
+    <dimen name="padding_drawer_size">16dp</dimen>
+    <dimen name="header_height_size">160dp</dimen>
+    <dimen name="account_avatar">60dp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="drawer_top_size">16dp</dimen>
 
 
 </resources>

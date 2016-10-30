@@ -6,20 +6,55 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
     </style>
 
-    <style name="LoginCard">
-        <item name="android:layout_marginLeft">@dimen/card_lr_margin</item>
-        <item name="android:layout_marginRight">@dimen/card_lr_margin</item>
+    <style name="SplashTheme" parent="Theme.Design.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/app_login_back</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="CustomCard">
         <item name="cardBackgroundColor">@android:color/white</item>
         <item name="cardCornerRadius">@dimen/corner_radius_size</item>
         <item name="contentPadding">@dimen/content_padding_size</item>
         <item name="cardElevation">@dimen/elevation_size</item>
+    </style>
+
+    <style name="CustomCard.LoginCard">
+        <item name="android:layout_marginLeft">@dimen/card_lr_margin</item>
+        <item name="android:layout_marginRight">@dimen/card_lr_margin</item>
         <item name="android:layout_marginBottom">@dimen/margin_bottom_size</item>
     </style>
 
-    <style name="LoginCardLand" parent="LoginCard">
+    <style name="CustomCard.LoginCardLand">
+        <item name="android:layout_marginLeft">@dimen/card_lr_margin</item>
+        <item name="android:layout_marginRight">@dimen/card_lr_margin</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_size</item>
         <item name="contentPadding">@dimen/content_padding_land_size</item>
+    </style>
+
+    <style name="CustomCard.ProductCard"/>
+
+    <style name="CustomCard.ProductCardLand"/>
+
+
+
+    <style name="CustomNavigationDrawer" parent="Widget.Design.NavigationView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="itemBackground">@drawable/nav_drawer_item_selector</item>
+        <item name="itemIconTint">@color/nav_icon_color_selector</item>
+        <item name="itemTextColor">@color/nav_color_selector</item>
     </style>
 
     <style name="CustomButton">

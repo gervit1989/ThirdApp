@@ -9,4 +9,5 @@ public interface ConstantManager {
     boolean IS_CUSTOM_BOOK_FONT = false;
     String REG_USER_LOGIN_KEY ="USER_AUTH_LOGIN";
     String REG_USER_PASS_KEY="USER_PASS";
+    String USER_AVATAR_URL_KEY = "USER_AVATAR_URL_KEY";
 }
