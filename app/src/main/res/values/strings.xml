@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">mvpAuth</string>
+    <string name="hint_login_mail">Введите email</string>
+    <string name="hint_login_pass">Введите пароль</string>
+
+    <!--Fonts-->
+    <string name="roboto_regular">sans-serif</string>
+    <string name="roboto_light">sans-serif-light</string>
+    <string name="roboto_condensed">sans-serif-condensed</string>
+    <string name="roboto_black">sans-serif-black</string>
+    <string name="roboto_thin">sans-serif-thin</string>
+    <string name="roboto_medium">sans-serif-medium</string>
+    <string name="login_start_btn_text">Войти</string>
+    <string name="login_show_btn_text">Смотреть каталог</string>
+
+    <string name="font_book">fonts/PTBebasNeueBook.ttf</string>
+    <string name="font_regular">fonts/PTBebasNeueRegular.ttf</string>
+
+</resources>

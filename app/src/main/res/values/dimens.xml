@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--Font Sizes-->
+    <dimen name="standart_text_size">14sp</dimen>
+    <dimen name="btn_text_size">12sp</dimen>
+    <dimen name="app_txt_font_size">40sp</dimen>
+
+    <!--Font Sizes landscape-->
+    <dimen name="app_txt_font_land_size">20sp</dimen>
+
+
+    <!--Sizes of views-->
+    <dimen name="corner_radius_size">2dp</dimen>
+    <dimen name="content_padding_size">16dp</dimen>
+    <dimen name="elevation_size">4dp</dimen>
+    <dimen name="margin_bottom_size">8dp</dimen>
+    <dimen name="ico_margin_sides">16dp</dimen>
+    <dimen name="app_ico_margin_size">48dp</dimen>
+    <dimen name="app_ico_width_size">70dp</dimen>
+    <dimen name="app_ico_height_size">100dp</dimen>
+    <dimen name="app_txt_margin_size">24dp</dimen>
+    <dimen name="app_txt_pad_size">16dp</dimen>
+    <dimen name="social_layout_pad">16dp</dimen>
+    <dimen name="btn_size">56dp</dimen>
+    <dimen name="btn_lr_margin">32dp</dimen>
+    <dimen name="card_lr_margin">36dp</dimen>
+    <dimen name="ico_btn_size">56dp</dimen>
+    <dimen name="ico_btn_pad">16dp</dimen>
+
+    <!--Sizes of views landscape-->
+    <dimen name="app_ico_width_land_size">35dp</dimen>
+    <dimen name="app_ico_height_land_size">50dp</dimen>
+    <dimen name="app_ico_margin_land_size">24dp</dimen>
+    <dimen name="app_txt_margin_land_size">12dp</dimen>
+    <dimen name="app_txt_pad_land_size">8dp</dimen>
+    <dimen name="btn_land_size">36dp</dimen>
+    <dimen name="content_padding_land_size">16dp</dimen>
+    <dimen name="ico_btn_land_size">28dp</dimen>
+    <dimen name="ico_btn_land_pad">8dp</dimen>
+    <dimen name="social_layout_land_pad">8dp</dimen>
+
+
+</resources>
