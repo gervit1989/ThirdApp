@@ -121,4 +121,9 @@ public class DataManager {
         mMockProductList.add(new ProductDTO(9, "test 9", "imageUrl", "description 9 description 9 description 9 description 9 description 9 ", 500, 9));
         mMockProductList.add(new ProductDTO(10, "test 10", "imageUrl", "description 10 description 10 description 10 description 10 description 10 ", 550, 10));
     }
+
+    public boolean isAuthUser() {
+
+        return false;
+    }
 }

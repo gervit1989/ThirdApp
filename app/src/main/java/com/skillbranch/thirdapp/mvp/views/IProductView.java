@@ -19,5 +19,5 @@ public interface IProductView extends IView{
 
     void showProductView(ProductDTO product);
 
-    void updateProductCountView();
+    void updateProductCountView(ProductDTO product);
 }

@@ -5,6 +5,8 @@ import android.support.design.BuildConfig;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -14,28 +16,22 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.skillbranch.thirdapp.R;
 import com.skillbranch.thirdapp.data.managers.DataManager;
-import com.skillbranch.thirdapp.data.storage.models.ProductDTO;
-import com.skillbranch.thirdapp.mvp.presenters.IProductPresenter;
-import com.skillbranch.thirdapp.mvp.presenters.ProductPresenter;
-import com.skillbranch.thirdapp.mvp.views.IProductView;
+import com.skillbranch.thirdapp.mvp.views.IView;
+import com.skillbranch.thirdapp.ui.fragments.CatalogFragment;
 import com.skillbranch.thirdapp.utils.ConstantManager;
 import com.skillbranch.thirdapp.utils.RoundedAvatarDrawable;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RootActivity extends AppCompatActivity implements IProductView {
+public class RootActivity extends AppCompatActivity implements IView {
 
     private static final String TAG = "RootActivity";
-
-    /**
-     * Presenter
-     */
-    ProductPresenter mPresenter = ProductPresenter.getInstance();
 
     /**
      * Пользовательские настройки
@@ -56,6 +52,10 @@ public class RootActivity extends AppCompatActivity implements IProductView {
     @BindView(R.id.catalog_drawer)
     NavigationView mNavigationView;
 
+    @BindView(R.id.catalog_fragment_container)
+    FrameLayout mFrameLayout;
+
+    FragmentManager mFragmentManager;
 
     //region ========================= Life cycle =========================
 
@@ -76,13 +76,10 @@ public class RootActivity extends AppCompatActivity implements IProductView {
         initToolbar();
         initDrawer();
 
-        mPresenter.takeView(this);
-        mPresenter.initView();
-
-        /**
-         * Хранилище данных пользователя
-         */
-        mDataManager = DataManager.getINSTANCE();
+        mFragmentManager = getSupportFragmentManager();
+        if (savedInstanceState == null){
+            //mFragmentManager.beginTransaction().replace(R.id.catalog_fragment_container, new CatalogFragment()).commit();
+        }
 
     }
 
@@ -112,10 +109,12 @@ public class RootActivity extends AppCompatActivity implements IProductView {
             public boolean onNavigationItemSelected(MenuItem item) {
                 //showMessage(item.getTitle().toString());
                 item.setChecked(true);
+                Fragment fragment = null;
                 switch (item.getItemId()){
                     case R.id.user_account_menu:
                         break;
                     case R.id.goods_catalog_menu:
+                        fragment = new CatalogFragment();
                         break;
                     case R.id.favorites_menu:
                         break;
@@ -124,8 +123,11 @@ public class RootActivity extends AppCompatActivity implements IProductView {
                     case R.id.notices_menu:
                         break;
                 }
+                if (fragment!=null){
+                    mFragmentManager.beginTransaction().replace(R.id.catalog_fragment_container, fragment).addToBackStack(null).commit();
+                }
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                return false;
+                return true;
             }
         });
     }
@@ -191,13 +193,12 @@ public class RootActivity extends AppCompatActivity implements IProductView {
 
     @Override
     protected void onDestroy() {
-        mPresenter.dropView();
         super.onDestroy();
     }
 
     //endregion
 
-    //region ========================= IProductView =========================
+    //region ========================= IView =========================
     @Override
     public void showMessage(String message) {
         Snackbar.make(mCoordinatorLayout, message, Snackbar.LENGTH_LONG).show();
@@ -222,21 +223,6 @@ public class RootActivity extends AppCompatActivity implements IProductView {
 
     @Override
     public void hideLoad() {
-
-    }
-
-    @Override
-    public IProductPresenter getPresenter() {
-        return mPresenter;
-    }
-
-    @Override
-    public void showProductView(ProductDTO product) {
-
-    }
-
-    @Override
-    public void updateProductCountView() {
 
     }
     //endregion

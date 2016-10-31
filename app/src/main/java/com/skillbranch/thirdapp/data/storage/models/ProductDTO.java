@@ -119,5 +119,13 @@ public class ProductDTO implements Parcelable{
     public void setCount(int count) {
         this.count = count;
     }
+
+    public void deleteProduct() {
+        count--;
+    }
+
+    public void addProduct() {
+        count++;
+    }
     //endregion
 }
